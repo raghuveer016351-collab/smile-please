@@ -3,122 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For My Beautiful Girl ❤️</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#ffd6e7,#ffeef5);
-    overflow:hidden;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+overflow:hidden;
 }
 
 .container{
-    width:90%;
-    max-width:600px;
-    text-align:center;
-    background:rgba(255,255,255,.8);
-    padding:40px 30px;
-    border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-h1{
-    color:#ff4d88;
-    margin-bottom:20px;
-    font-size:2.2rem;
-}
-
-p{
-    font-size:1.15rem;
-    color:#444;
-    line-height:1.8;
-    margin-bottom:30px;
-}
-
-button{
-    background:#ff4d88;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    border-radius:40px;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.08);
+width:90%;
+max-width:600px;
+background:white;
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .section{
-    display:none;
+display:none;
 }
 
 .active{
-    display:block;
+display:block;
 }
 
-.heart{
-    position:absolute;
-    color:#ff4d88;
-    font-size:20px;
-    animation:float 8s linear infinite;
-    opacity:.7;
+h1{
+color:#ff4d88;
+margin-bottom:20px;
 }
 
-@keyframes float{
-
-0%{
-transform:translateY(100vh);
-opacity:0;
+p{
+font-size:20px;
+line-height:1.8;
+color:#444;
+margin-bottom:30px;
 }
 
-20%{
-opacity:1;
+button{
+background:#ff4d88;
+color:white;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+font-size:18px;
+cursor:pointer;
 }
 
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
-
+button:hover{
+transform:scale(1.05);
 }
 
 </style>
 
 </head>
-
 <body>
 
 <div class="container">
-
-<body>
-
-<div class="container">
-
-<!-- PAGE 1 -->
 
 <div id="page1" class="section active">
 
 <h1>Hey Beautiful 🌸</h1>
 
 <p>
-Mujhe pata hai aaj tumhara mood thoda off hai... 💗
+Mujhe pata hai aaj tumhara mood thoda off hai...
 <br><br>
-Bas 2 minute mujhe de do...
-Main sirf tumhe smile karwana chahta hoon. 😊
+Bas 2 minute mujhe de do. ❤️
 </p>
 
 <button onclick="nextPage(2)">
@@ -126,25 +89,21 @@ Click Here ❤️
 </button>
 
 </div>
-
-<!-- PAGE 2 -->
-
 <div id="page2" class="section">
 
-<h1>You Are Strong 💖</h1>
+<h1>You Are Amazing 💖</h1>
 
 <p>
-Aaj ka din shayad thoda mushkil tha... 🌧️
+Aaj ka din shayad thoda difficult tha...
 <br><br>
 
-Lekin ek baat hamesha yaad rakhna...
+Lekin tum bahut strong ho. 🌸
 <br><br>
 
-Tum bahut special ho. ❤️
+Aur ek baat...
 <br><br>
 
-Aur chahe kuch bhi ho,
-Main hamesha tumhare saath hoon. 🤍
+Main hamesha tumhare saath hoon. ❤️
 </p>
 
 <button onclick="nextPage(3)">
@@ -152,16 +111,14 @@ Need a Hug? 🤗
 </button>
 
 </div>
-
-<!-- PAGE 3 -->
-
 <div id="page3" class="section">
 
 <h1>Virtual Hug 🤗</h1>
 
 <p id="hugText">
-Click the button...
-A hug is waiting for you ❤️
+Agar tum udaas ho...
+<br><br>
+To ye ek virtual hug sirf tumhare liye. ❤️
 </p>
 
 <button onclick="giveHug()">
@@ -169,76 +126,22 @@ Give Me a Hug 🤍
 </button>
 
 </div>
-
-</div>
-
-<script>
-
-function nextPage(page){
-
-document.querySelectorAll(".section").forEach(sec=>{
-sec.classList.remove("active");
-});
-
-document.getElementById("page"+page).classList.add("active");
-
-}
-
-function giveHug(){
-
-const text=document.getElementById("hugText");
-
-text.innerHTML="Loading Hug... ❤️<br><br>🟩⬜⬜⬜⬜ 20%";
-
-setTimeout(()=>{
-text.innerHTML="Loading Hug... ❤️<br><br>🟩🟩🟩⬜⬜ 60%";
-},700);
-
-setTimeout(()=>{
-text.innerHTML="Loading Hug... ❤️<br><br>🟩🟩🟩🟩🟩 100%";
-},1400);
-
-setTimeout(()=>{
-alert("🤗 Hug Delivered Successfully ❤️");
-},2200);
-
-}
-
-</script>
-
-</body>
-
-<h1>You Are Strong 💖</h1>
-
-<p>
-Aaj ka din shayad thoda mushkil tha... 🌧️
-<br><br>
-
-Lekin ek baat hamesha yaad rakhna...
-<br><br>
-
-Tum bahut special ho. ❤️
-<br><br>
-
-Aur chahe kuch bhi ho,
-Main hamesha tumhare saath hoon. 🤍
-</p>
-
-<button onclick="nextPage(3)">
-Need a Hug? 🤗
-</button>
 <div id="page4" class="section">
 
 <h1>😊 Smile Challenge 😊</h1>
 
 <p>
-Ek chhoti si request hai...
+
+Bas ek chhoti si request hai...
+
 <br><br>
 
-Bas ek baar smile kar do. 💗
+Please ek baar smile kar do. 💗
+
 <br><br>
 
-Promise, duniya thodi aur khoobsurat lagne lagegi.
+Tumhari smile bahut beautiful hai. ❤️
+
 </p>
 
 <button onclick="nextPage(5)">
@@ -246,16 +149,60 @@ I Smiled 😊
 </button>
 
 </div>
-</div>
-</div>
+<div id="page5" class="section">
 
+<h1>❤️ Yayyy! ❤️</h1>
+
+<p>
+
+Thank You... 😊
+
+<br><br>
+
+Tumhari smile hi meri sabse badi khushi hai. 💖
+
+<br><br>
+
+Chahe tumhara din kitna bhi mushkil ho...
+
+Main hamesha tumhare saath hoon. 🤍
+
+<br><br>
+
+🌹 I Love You Forever 🌹
+
+</p>
+
+<button onclick="location.reload()">
+Start Again 🔄
+</button>
+
+</div>
 </div>
 
 <script>
 
 function nextPage(page){
+function giveHug(){
 
-document.querySelectorAll(".section").forEach(sec=>{
+const text = document.getElementById("hugText");
+
+text.innerHTML = "🤗 Sending a big warm hug... ❤️";
+
+setTimeout(function(){
+
+text.innerHTML = "💖 Hug Delivered Successfully!";
+
+},2000);
+
+setTimeout(function(){
+
+nextPage(4);
+
+},3000);
+
+}
+document.querySelectorAll(".section").forEach(function(sec){
 sec.classList.remove("active");
 });
 
