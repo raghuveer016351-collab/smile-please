@@ -183,30 +183,28 @@ Start Again 🔄
 <script>
 
 function nextPage(page){
-function giveHug(){
 
-const text = document.getElementById("hugText");
+    document.querySelectorAll(".section").forEach(function(sec){
+        sec.classList.remove("active");
+    });
 
-text.innerHTML = "🤗 Sending a big warm hug... ❤️";
-
-setTimeout(function(){
-
-text.innerHTML = "💖 Hug Delivered Successfully!";
-
-},2000);
-
-setTimeout(function(){
-
-nextPage(4);
-
-},3000);
+    document.getElementById("page" + page).classList.add("active");
 
 }
-document.querySelectorAll(".section").forEach(function(sec){
-sec.classList.remove("active");
-});
 
-document.getElementById("page"+page).classList.add("active");
+function giveHug(){
+
+    const text = document.getElementById("hugText");
+
+    text.innerHTML = "🤗 Sending a big warm hug... ❤️";
+
+    setTimeout(function(){
+        text.innerHTML = "💖 Hug Delivered Successfully!";
+    }, 2000);
+
+    setTimeout(function(){
+        nextPage(4);
+    }, 3000);
 
 }
 
